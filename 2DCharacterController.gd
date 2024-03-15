@@ -34,34 +34,34 @@ extends Movement2D
 @export var JumpBufferTimerLength = .2
 
 @export_category("Horizontal movement")
-## The fastest the player can move with just the movment keys
+## The fastest the player can move with just the movement keys
 @export var SoftSpeedCap = 1200
 ## The fastest the player can move in general
 @export var HardSpeedCap = 6000
 
-## The ammount of acceleration the player has when moving normaly
+## The amount of acceleration the player has when moving normally
 @export var NormalAcceleration = 350
 
-## The ammount of acceleration the player has when turning around
+## The amount of acceleration the player has when turning around
 @export var TuringAcceleration = 400
 
-## The ammount of acceleration the player has when in the air
+## The amount of acceleration the player has when in the air
 @export var AirAcceleration = 120
 
-## The ammount of deceleration the player has when stopping normally
+## The amount of deceleration the player has when stopping normally
 @export var NormalDeceleration = 290
 
-## The ammount of deceleration the player has when in the air
+## The amount of deceleration the player has when in the air
 @export var AirDeceleration = 10
 
-## The ammount of deceleration the player going past the soft speed cap and is on the floor
+## The amount of deceleration the player going past the soft speed cap and is on the floor
 @export var HighSpeedDeceleration = 40
 
-## How much the player trying to move in the opposite direction effects them when
+## How much the player trying to move in the opposite direction affect them when
 ## they are over the soft speed cap and are grounded
 @export var BreakingSpeed = 60
 
-## How much the player trying to move in the opposite direction effects them when
+## How much the player trying to move in the opposite direction affect them when
 ## they are over the soft speed cap and are in the air
 @export var AirBreakingSpeed = 20
 
@@ -73,24 +73,24 @@ extends Movement2D
 ## jump or hit their head on a ceiling while moving fast
 @export var VerticalNudge = 7
 
-## How much to nudge the player every frame if they hit their head on the coner of a ceiling
+## How much to nudge the player every frame if they hit their head on the corner of a ceiling
 @export var HorizontalNudge = 7
 
-## How leaniant to be when deciding if the player will be nudged or not
+## How lenient to be when deciding if the player will be nudged or not
 ## while they are hitting a corner while moving up.
 ## Enter a decimal as in a percent, .4 means that if the corner
 ## is only covering 40% of the character's collision box starting from the
 ## center then they will be nudged. 
 @export var CornerUpNudgeLeanancy = .6
 
-## How leaniant to be when deciding if the player will be nudged or not
+## How lenient to be when deciding if the player will be nudged or not
 ## while they are hitting a corner while moving Horizontally.
 ## Enter a decimal as in a percent, .4 means that if the corner
 ## is only covering 40% of the character's collision box starting from the
 ## center then they will be nudged. 
 @export var CornerHorizontalNudgeLeanancy = .6
 
-## How leaniant to be when deciding if the player will be nudged or not
+## How lenient to be when deciding if the player will be nudged or not
 ## while they are hitting a ledge while.
 ## Enter a decimal as in a percent, .4 means that if the ledge
 ## is only covering 40% of the character's collision box starting from the
@@ -104,10 +104,10 @@ extends Movement2D
 var JumpInput = false
 
 # If the player can activate coyote time, resets when landing
-# This is to prevent the timer reseting when in the air and not just leaving the ground
+# This is to prevent the timer from resetting when in the air and not just leaving the ground
 var CanCoyoteTime
 
-# If the player character is in coyote time
+# If the player character is in Coyote time
 var CoyoteTime = false
 
 # The current time on the coyote timer
@@ -117,7 +117,7 @@ var CurrCoyoteTimer = 0
 var CurrJumpBufferTimer = 0
 
 # If the player is still holding the jump button after a jump has started
-# Variable automatically goes back to false when player starts falling
+# Variable automatically goes back to false when the player starts falling
 var HoldingJumpInput = false
 
 # What direction the player is pressing
@@ -126,7 +126,7 @@ var direction = 0
 # Set to true if the player is at the Peak of their jump, used when calculating air momentum
 var PeakOfJump : bool
 
-# Something to do with raycasts, I genuanly do not know
+# Something to do with ray casts, I genuinely do not know
 var space_state
 
 # The size of the player's CollisionShape2D (as is, will not update if
