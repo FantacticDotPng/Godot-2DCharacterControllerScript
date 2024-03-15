@@ -65,7 +65,7 @@ extends Movement2D
 ## they are over the soft speed cap and are in the air
 @export var AirBreakingSpeed = 20
 
-## The how fast the running animation can get in percentage (1.5 is 150% animation speed)
+## How fast the running animation can get in terms of percentage (1.5 means the running animation can't go over 150% animation speed)
 @export var MaxRunningAnimationSpeed = 1.5
 
 @export_category("Corner/Ledge forgiveness")
