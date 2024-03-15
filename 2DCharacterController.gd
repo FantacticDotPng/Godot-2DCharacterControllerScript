@@ -337,23 +337,6 @@ func _physics_process(delta):
 					# Apply air Deceleration while within soft speed cap
 					CurrentVelocity.x -= (AirAcceleration * sign(CurrentVelocity.x)) * (abs(CurrentVelocity.x) / SoftSpeedCap)
 			
-	
-#region Debug
-	if (Input.is_action_just_pressed("Space")):
-		if (Input.is_action_pressed("up")):
-			HoldingJumpInput = false
-			CurrentVelocity.y -= 2000
-		else: if (Input.is_action_pressed("down")):
-			CurrentVelocity.x = 0
-			CurrentVelocity.y = 0
-		else:
-			CurrentVelocity.x += 10000 * direction
-	
-	if(Input.is_action_just_pressed("Rest")):
-		transform.origin = Vector2.ZERO
-#endregion
-	
-	
 	var EnableCollision = true
 	
 	var Center = transform.origin + $CollisionShape2D.transform.origin
