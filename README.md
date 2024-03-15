@@ -83,12 +83,28 @@ There are a lot of variables in this script to make sure you can adjust it to fi
 
 **VerticalNudge** - How much to nudge the player every frame if they just barely didn't make a jump or if they hit their head on a ceiling while moving quickly
 
-**HorizontalNudge**
+**HorizontalNudge** - How much to nudge the player every frame if they hit their head on a corner or ceiling
 
+**CornerUpNudgeLeanancy** - In decimal, what percent of half of the player's hitbox can be hit by a corner while moving up
 
+**CornerHorizontalNudgeLeanancy** - In decimal, what percent of half of the player's hitbox can be hit by a corner while moving horizontally
 
+**LedgeNudgeLeanancy** - In decimal, what percent of half of the player's hitbox can be hit by a ledge
 
+## Movement2D Script
+The script the "2DCharacterController" script inherits from.
+Deals with basic gravity and slopes
 
+It has the current velocity and the project's "default_gravity" setting.
 
+In addition to that, it allows you to set that object's max fall speed, add flat gravity, or add a gravity multiplier to the object.
 
+## Move_Between_Points Script
+This script was made to show the player interacting with moving platforms in the example project, but I also supplied it here.
+While this was made for platforms, you can put this on anything you want to tween between points.
 
+**MovePoints** - Array of Vector2s that tell the object where you want it to move, each point is relative to the object's starting position, so you can move it around however you like in your scene and it should still move the same as before you moved it.
+
+**TweenSpeed** - How fast the object moves between the points
+
+**Backtrack** - If set to true then once the object reaches the end of the list of points it will go backwards through the list before reaching its original point and then repeating, by default, the object will return to its starting position once it reaches the end of the list of points
