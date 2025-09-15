@@ -8,13 +8,13 @@ var CurrentVelocity : Vector2
 var Gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # A flat number that is added to gravity as it is applied
-@export var FlatGravIncrease : float = 1
+@export var FlatGravIncrease : float = 0
 
 # A multiplier that is added to the gravity as it is applied
 # It is also applied to the Flat Gravity Increase variable
 @export var GravMultiplier : float = 1
 
-## The max speed the player can fall
+## The max speed the character can fall
 var MaxFallSpeed = 2500
 
 
